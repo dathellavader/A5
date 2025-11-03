@@ -66,7 +66,7 @@ int max_people = 0;
 double max_cost = 0.0;
 double average = 0.0;
 
-cout << "Welcome to my Pizza Party Statistic Program!" << endl << endl;
+cout << "Welcome to the Pizza Party Statistic Program!" << endl << endl;
 
 bool again = true;
 while (again) {
@@ -132,7 +132,7 @@ cout << endl << endl;
 
 // after everything
 
-average = total_pizzas / count;
+average = static_cast<double>(total_pizzas) / count;
 
 cout << "Number of entries: " << count << endl;
 cout << "Total number of pizzas: " << total_pizzas << endl;
