@@ -60,6 +60,12 @@ double pizza_cost = 0.0;
 
 char answer = ' ';
 
+int total_entries = 0;
+int total_pizzas = 0;
+int max_people = 0;
+double max_cost = 0.0;
+
+
 cout << "Welcome to my Pizza Party Statistic Program!" << endl << endl;
 cout << "Enter the number of people, average number of slices per person, and the cost of a pizza separated by a space: ";
 cin >> num_people;
@@ -104,7 +110,9 @@ cout << "Total Cost:      $" << total_cost << endl << endl;
 cout << "Do you want to enter more? (y/n): " << endl << endl;
 cin >> answer;
 
+// max
 
+max
 
 
 
