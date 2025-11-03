@@ -83,7 +83,6 @@ double fraction_pizzas = slices / slices_per_pizza;
 num_of_pizzas = ceil(fraction_pizzas);
 
 // cost of pizza
-
 cost_of_pizzas = num_of_pizzas * pizza_cost;
 
 // tax
@@ -146,8 +145,6 @@ cout << "A pizza a day keeps the doctor away!" << endl;
 
   return 0;
 }
-
-// Function implementations (if any)
 
 
 // ------------- DESIGN -------------
