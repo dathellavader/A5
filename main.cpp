@@ -19,16 +19,16 @@
 
 
 // ------------- DESIGN DOCUMENT -------------
-// A. INPUT ✅: 
-// B. OUTPUT ✅:
-// C. CALCULATIONS ✅:
-// D. LOGIC and ALGORITHMS ✅:
+// A. INPUT ✅: yes
+// B. OUTPUT ✅: yes
+// C. CALCULATIONS ✅: yes
+// D. LOGIC and ALGORITHMS ✅: yes
 //    (Optional) flow chart link or file name: 
 
 
 // ------------- TESTING -------------
-// PASS ALL GIVEN SAMPLE RUN TESTS ✅: 
-// (Optional) Additional tests count:   
+// PASS ALL GIVEN SAMPLE RUN TESTS ✅: yes
+// (Optional) Additional tests count: 2
 
 
 // ------------- CODE -------------
@@ -155,21 +155,81 @@ Program Description:
 
 Design:
 A. INPUT
-Define the input variables including name data type. 
+int num_people
+double slices_per_person
+double pizza_cost
+char answer
 
 B. OUTPUT
-Define the output variables including data types. 
+int num_of_pizzas
+double cost_of_pizzas
+double total_tax
+double total_delivery_tax
+double total_cost
+int count
+int total_pizzas
+double average
+int max_people
+double max_cost
 
 C. CALCULATIONS
-Describe calculations used by algorithms in step D.  
-List all formulas. 
-If there are no calculations needed, state there are no calculations.
+slices = num_people * slices_per_person
+fraction_pizzas = slices / slices_per_pizza
+num_of_pizzas = ceil(fraction_pizzas)
+cost_of_pizzas = num_of_pizzas * pizza_cost
+total_tax = tax * cost_of_pizzas
+pizzas_and_tax = cost_of_pizzas + total_tax
+total_delivery_tax = delivery_charge * pizzas_and_tax
+total_cost = pizzas_and_tax + total_delivery_tax
+total_pizzas = total_pizzas + num_of_pizzas
+average = static_cast<double>(total_pizzas) / count
 
 D. LOGIC and ALGORITHMS
-Design the logic of your program using pseudocode or flowcharts. 
-Use conditionals, loops, functions or array constructs.
-List the steps in transforming inputs into outputs. 
-https://github.com/Glen-Sasek-PCC-Instructor/2025-06-22/blob/main/Pseudocode-Reference.txt
+
+MESSAGE "Welcome to the Pizza Party Statistic Program!"
+
+MAKE:
+tax = 0.07
+slices_per_pizza = 8
+delivery_charge = 0.2
+
+SET again = true
+WHILE again == true {
+    PROMPT "Enter the number of people, average number of slices per person, and the cost of a pizza separated by a space: "
+    INPUT num_people
+    INPUT slices_per_person
+    INPUT pizza_cost
+
+    // DO CALCULATIONS
+    fixed << setprecision(2);
+    DISPLAY "Number of pizzas: " << num_of_pizzas
+    DISPLAY "Cost of pizzas: $" << cost_of_pizzas
+    DISPLAY "Tax: $" << total_tax
+    DISPLAY "Delivery: $" << total_delivery_tax
+    DISPLAY "Total Cost: $" << total_cost
+
+    // Update total pizzas
+    
+    max_people = max(max_people, num_people)
+    max_cost = max(max_cost, total_cost)
+
+    count++ // incremement amount of entry
+
+    PROMPT "Do you want to enter more? (y/n): "
+    INPUT answer
+    CONVERT answer to lowercase
+
+} END WHILE
+
+// Calculate average
+
+DISPLAY "Number of entries: " << count
+DISPLAY "Total number of pizzas: " << total_pizzas
+DISPLAY "Average number of pizzas: " << average
+DISPLAY "Maximum number of people: " << max_people
+DISPLAY "Maximum cost of pizzas: $" << max_cost
+
+MESSAGE "A pizza a day keeps the doctor away!"
 
 
 SAMPLE RUNS
