@@ -217,8 +217,8 @@ WHILE again == true {
 
     PROMPT "Do you want to enter more? (y/n): "
     INPUT answer
-    CONVERT answer to lowercase
-
+    answer = tolower(answer)
+    again = answer == 'y'
 } END WHILE
 
 // Calculate average
